@@ -6,26 +6,28 @@ An end-to-end conversion-funnel experiment in an insurance journey. This portfol
 
 <!--
 Add your five screenshots to assets/screenshots/ using the filenames below.
-GitHub READMEs do not support JavaScript sliders; this horizontal gallery is
-scrollable on narrow screens, and each thumbnail links to the full-size image.
+Each preview links to the full-size image.
 -->
 
-<table>
-  <tr>
-    <td width="20%"><a href="assets/screenshots/01-overview.png"><img src="assets/screenshots/01-overview.png" alt="Experiment report overview" /></a></td>
-    <td width="20%"><a href="assets/screenshots/02-funnel-analysis.png"><img src="assets/screenshots/02-funnel-analysis.png" alt="Conversion funnel analysis" /></a></td>
-    <td width="20%"><a href="assets/screenshots/03-experiment-results.png"><img src="assets/screenshots/03-experiment-results.png" alt="A/B test results" /></a></td>
-    <td width="20%"><a href="assets/screenshots/04-quote-prototype.gif"><img src="assets/screenshots/04-quote-prototype.gif" alt="Interactive quote prototype showing control and treatment states" /></a></td>
-    <td width="20%"><a href="assets/screenshots/05-methodology.png"><img src="assets/screenshots/05-methodology.png" alt="Experiment methodology and quality controls" /></a></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>Overview</sub></td>
-    <td align="center"><sub>Funnel analysis</sub></td>
-    <td align="center"><sub>Experiment results</sub></td>
-    <td align="center"><sub>Quote prototype · Control/Treatment</sub></td>
-    <td align="center"><sub>Methodology</sub></td>
-  </tr>
-</table>
+### 1. Overview
+
+<p align="center"><a href="assets/screenshots/01-overview.png"><img src="assets/screenshots/01-overview.png" alt="Experiment report overview" width="100%" /></a></p>
+
+### 2. Funnel analysis
+
+<p align="center"><a href="assets/screenshots/02-funnel-analysis.png"><img src="assets/screenshots/02-funnel-analysis.png" alt="Conversion funnel analysis" width="100%" /></a></p>
+
+### 3. Experiment results
+
+<p align="center"><a href="assets/screenshots/03-experiment-results.png"><img src="assets/screenshots/03-experiment-results.png" alt="A/B test results" width="100%" /></a></p>
+
+### 4. Quote prototype · Control/Treatment
+
+<p align="center"><a href="assets/screenshots/04-quote-prototype.gif"><img src="assets/screenshots/04-quote-prototype.gif" alt="Interactive quote prototype showing control and treatment states" width="100%" /></a></p>
+
+### 5. Methodology
+
+<p align="center"><a href="assets/screenshots/05-methodology.png"><img src="assets/screenshots/05-methodology.png" alt="Experiment methodology and quality controls" width="100%" /></a></p>
 
 ## Run it
 
