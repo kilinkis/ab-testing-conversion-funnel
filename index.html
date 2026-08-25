@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An end-to-end A/B testing and conversion-funnel optimization project for an insurance quote journey" />
+    <title>A/B Testing Conversion Funnel</title>
+    <link rel="preconnect" href="https://code.highcharts.com" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#overview"><span class="brand-mark">×</span> Lumen / Experimentation</a>
+      <nav aria-label="Primary navigation">
+        <a href="#findings">Findings</a><a href="#experiment">Experiment</a><a href="#prototype">Prototype</a><a href="#method">Method</a>
+      </nav>
+      <a class="header-action" href="docs/experiment-readout.md">Read the decision memo →</a>
+    </header>
+
+    <main>
+      <section id="overview" class="intro wrap">
+        <p class="eyebrow">Portfolio case study · Synthetic data · August 2026</p>
+        <div class="intro-grid">
+          <div>
+            <h1>Make digital decisions<br />that <em>earn</em> trust.</h1>
+            <p class="lede">An end-to-end experimentation system for an insurance quote journey—from behavioural signal to a decision a product team can act on.</p>
+          </div>
+          <aside class="case-card" aria-label="Experiment outcome">
+            <p class="muted-label">Test outcome</p>
+            <p class="outcome">Ship with<br />monitoring</p>
+            <p>+2.6pp mobile quote completion<br /><span class="positive">95% CI: +0.7 to +4.5pp</span></p>
+          </aside>
+        </div>
+        <div class="journey" aria-label="Insurance quote journey">
+          <span>1. Arrive</span><i></i><span>2. Quote details</span><i></i><span class="at-risk">3. Select cover</span><i></i><span>4. Complete</span>
+        </div>
+      </section>
+
+      <section id="findings" class="section charcoal">
+        <div class="wrap section-heading inverse">
+          <p class="eyebrow">01 / Diagnose the opportunity</p>
+          <h2>The mobile problem is<br />at the decision point.</h2>
+          <p>Funnel data narrowed the opportunity. Qualitative review then suggested a mechanism: people were comparing too much information before they understood the difference between covers.</p>
+        </div>
+        <div class="wrap dashboard-grid">
+          <article class="chart-panel wide"><div><p class="chart-label">Funnel conversion by device</p><p class="chart-note">The largest device gap appears at cover selection.</p></div><div id="funnel-chart" class="chart" aria-label="Funnel conversion chart"></div></article>
+          <article class="finding-panel"><p class="chart-label">Observed friction</p><p class="big-number">31%</p><p>of mobile sessions reaching cover selection abandon without opening a cover detail.</p><hr /><p class="chart-label">Evidence triangulation</p><ul><li>Scroll depth falls after the third pricing block</li><li>“What’s included?” is the top help query</li><li>Error rate stays stable—this is not a form problem</li></ul></article>
+        </div>
+      </section>
+
+      <section id="experiment" class="section wrap">
+        <div class="section-heading">
+          <p class="eyebrow">02 / Design a test that can answer the question</p>
+          <h2>Reduce comparison effort,<br />not customer choice.</h2>
+        </div>
+        <div class="experiment-grid">
+          <article class="hypothesis"><p class="muted-label">Pre-registered hypothesis</p><p>For mobile quote visitors, a recommended cover plus a concise comparison will improve quote completion by at least <strong>1.5pp</strong>, without a meaningful increase in support intent or time-to-complete.</p></article>
+          <dl class="definition-list"><div><dt>Population</dt><dd>Mobile quote visitors, DK</dd></div><div><dt>Allocation</dt><dd>50 / 50, persistent visitor assignment</dd></div><div><dt>Primary metric</dt><dd>Quote completion per assigned visitor</dd></div><div><dt>Guardrails</dt><dd>Errors, support intent, completion time</dd></div></dl>
+        </div>
+        <div class="metric-row">
+          <article><p class="muted-label">Control</p><p class="metric">18.4%</p><p>n = 8,214 visitors</p></article>
+          <article class="treatment-metric"><p class="muted-label">Treatment</p><p class="metric">21.0%</p><p>n = 8,197 visitors</p></article>
+          <article><p class="muted-label">Observed lift</p><p class="metric positive">+2.6pp</p><p>Primary metric · 95% CI excludes 0</p></article>
+        </div>
+        <article class="chart-panel result-chart"><div><p class="chart-label">Effect estimate with 95% confidence intervals</p><p class="chart-note">Primary result is supported; guardrails remain within pre-set bounds.</p></div><div id="effect-chart" class="chart" aria-label="Experiment effect confidence interval chart"></div></article>
+      </section>
+
+      <section id="prototype" class="section sand">
+        <div class="wrap prototype-heading"><div><p class="eyebrow">03 / Make the change concrete</p><h2>Experience the test.</h2><p>Use the toggle to inspect the two tested versions of the mobile cover-selection step.</p></div><div class="toggle" role="group" aria-label="Experiment version"><button class="active" data-variant="control">Control</button><button data-variant="treatment">Treatment</button></div></div>
+        <div class="wrap prototype-area"><div class="phone" aria-label="Insurance quote prototype"><div class="phone-top"><span>9:41</span><span>● ● ●</span></div><div class="quote-app"><p class="progress">YOUR QUOTE <span>Step 3 of 4</span></p><h3>Choose your cover</h3><p class="quote-help" id="quote-help">Compare what is included in each option.</p><div id="plans"></div><button class="continue">Continue to your quote <span>→</span></button><p class="fine-print">You can change your cover before payment.</p></div></div><aside class="prototype-notes"><p class="muted-label">Design rationale</p><h3 id="design-title">Control: full comparison</h3><p id="design-copy">All three options receive equal visual weight. The customer has to build their own mental model before choosing.</p><div class="event-callout"><span>Tracked event</span><code id="event-name">cover_option_selected</code></div><a href="docs/experiment-design.md">View implementation & tracking plan →</a></aside></div>
+      </section>
+
+      <section id="method" class="section wrap">
+        <div class="section-heading"><p class="eyebrow">04 / Make the result dependable</p><h2>Quality is part of the experiment.</h2></div>
+        <div class="method-grid"><article><span>01</span><h3>Pre-register</h3><p>Metric definitions, exclusions, minimum sample, and decision criteria were set before exposure.</p></article><article><span>02</span><h3>Validate</h3><p>Browser/device QA, event validation, assignment consistency, and a sample-ratio mismatch check ran before reading results.</p></article><article><span>03</span><h3>Decide responsibly</h3><p>Conversion is balanced with guardrails. Roll out in stages, retain a holdout, and monitor downstream outcomes.</p></article></div>
+        <div class="document-links"><a href="docs/experiment-roadmap.md">Experiment roadmap <span>→</span></a><a href="docs/qa-and-tracking-plan.md">QA & tracking plan <span>→</span></a><a href="sql/funnel_analysis.sql">SQL analysis <span>→</span></a><a href="data/experiment_snapshot.csv">Synthetic data <span>→</span></a></div>
+      </section>
+    </main>
+    <footer><div class="wrap"><span>A/B Testing Conversion Funnel</span><span>Insurance experimentation portfolio · All data is synthetic</span></div></footer>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

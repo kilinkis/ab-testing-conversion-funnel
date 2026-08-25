@@ -1,0 +1,13 @@
+visitor_id,device,variant,assigned_at,quote_completed,form_error,support_intent,completion_seconds
+v0001,mobile,control,2026-07-22T08:13:22Z,0,0,0,342
+v0002,mobile,treatment,2026-07-22T08:17:04Z,1,0,0,281
+v0003,desktop,control,2026-07-22T08:19:41Z,1,0,0,196
+v0004,mobile,treatment,2026-07-22T08:24:19Z,0,0,1,398
+v0005,mobile,control,2026-07-22T08:29:08Z,0,1,0,311
+v0006,desktop,treatment,2026-07-22T08:31:27Z,1,0,0,183
+v0007,mobile,treatment,2026-07-22T08:43:56Z,1,0,0,254
+v0008,mobile,control,2026-07-22T08:47:12Z,0,0,0,428
+v0009,mobile,control,2026-07-22T09:01:18Z,1,0,0,301
+v0010,mobile,treatment,2026-07-22T09:04:03Z,1,0,0,279
+v0011,desktop,control,2026-07-22T09:07:39Z,0,0,0,220
+v0012,mobile,treatment,2026-07-22T09:11:52Z,0,0,0,326
