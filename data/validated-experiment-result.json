@@ -1,0 +1,52 @@
+{
+  "validation_status": "synthetic_example_validated",
+  "experiment": {
+    "id": "quote-cover-recommendation-v1",
+    "name": "Cover recommendation v1",
+    "analysis_unit": "persistent_visitor_id",
+    "audience": "Mobile web visitors starting a Danish home-insurance quote",
+    "start": "2026-07-22",
+    "end": "2026-08-12",
+    "variants": ["control", "treatment"]
+  },
+  "primary_metric": {
+    "name": "quote_completion_per_assigned_visitor",
+    "control": { "visitors": 8214, "rate": 0.184 },
+    "treatment": { "visitors": 8197, "rate": 0.210 },
+    "absolute_difference_pp": 2.6,
+    "confidence_level": 0.95,
+    "confidence_interval_pp": [0.7, 4.5]
+  },
+  "guardrails": [
+    {
+      "name": "form_error_rate",
+      "difference_pp": -0.1,
+      "confidence_interval_pp": [-0.6, 0.4],
+      "maximum_allowed_increase_pp": 0.5,
+      "status": "clear"
+    },
+    {
+      "name": "support_intent",
+      "difference_pp": 0.3,
+      "confidence_interval_pp": [-0.5, 1.1],
+      "maximum_allowed_increase_pp": 1.0,
+      "status": "clear"
+    }
+  ],
+  "quality": {
+    "telemetry_qa": "pass",
+    "sample_ratio_mismatch": "pass",
+    "assignment_stability": "pass",
+    "material_incidents": [],
+    "customer_harm_signal": false
+  },
+  "segments": {
+    "status": "exploratory",
+    "concerning_adverse_segment": false
+  },
+  "source_files": [
+    "docs/experiment-design.md",
+    "docs/qa-and-tracking-plan.md",
+    "sql/funnel_analysis.sql"
+  ]
+}
