@@ -4,11 +4,6 @@ An end-to-end conversion-funnel experiment in an insurance journey. This portfol
 
 ## Report preview
 
-<!--
-Add your five screenshots to assets/screenshots/ using the filenames below.
-Each preview links to the full-size image.
--->
-
 ### 1. Overview
 
 <p align="center"><a href="assets/screenshots/01-overview.png"><img src="assets/screenshots/01-overview.png" alt="Experiment report overview" width="100%" /></a></p>
